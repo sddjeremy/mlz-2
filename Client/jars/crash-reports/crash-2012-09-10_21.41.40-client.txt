@@ -1,0 +1,35 @@
+---- Minecraft Crash Report ----
+// Oops.
+
+Time: 9/10/12 9:41 PM
+Description: Unexpected error
+
+java.lang.RuntimeException: java.lang.Exception: Image not found: /image.png
+	at net.minecraft.src.ModLoader.registerAllTextureOverrides(ModLoader.java:1632)
+	at net.minecraft.src.ModLoader.onTick(ModLoader.java:1188)
+	at net.minecraft.src.EntityRendererProxy.updateCameraAndRender(EntityRendererProxy.java:21)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:857)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:751)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.Exception: Image not found: /image.png
+	at net.minecraft.src.ModLoader.loadImage(ModLoader.java:1105)
+	at net.minecraft.src.ModLoader.registerAllTextureOverrides(ModLoader.java:1624)
+	... 5 more
+
+Relevant Details:
+- Minecraft Version: 1.3.2
+- Operating System: Windows 7 (amd64) version 6.1
+- Java Version: 1.7.0_07, Oracle Corporation
+- Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+- Memory: 972224544 bytes (927 MB) / 1056309248 bytes (1007 MB) up to 1056309248 bytes (1007 MB)
+- JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+- ModLoader: Mods loaded: 2
+ModLoader 1.3.2
+mod_monkeyMod 1.0
+
+- LWJGL: 2.4.2
+- OpenGL: Mobile Intel(R) 4 Series Express Chipset Family GL version 2.1.0 - Build 8.15.10.2202, Intel
+- Is Modded: Very likely
+- Type: Client
+- Texture Pack: Default
+- Profiler Position: N/A (disabled)
