@@ -6,7 +6,7 @@ import java.util.List;
 
 public class EntityAITasks
 {
-    public List field_75782_a = new ArrayList(); /* yuck */
+    private List field_75782_a = new ArrayList();
     private List field_75780_b = new ArrayList();
     private final Profiler field_75781_c;
     private int field_75778_d = 0;
@@ -20,6 +20,12 @@ public class EntityAITasks
     public void addTask(int par1, EntityAIBase par2EntityAIBase)
     {
         this.field_75782_a.add(new EntityAITaskEntry(this, par1, par2EntityAIBase));
+    }
+    
+    //It's this or reflect
+    public void clearTasks()
+    {
+    	this.field_75782_a.clear();
     }
 
     public void onUpdateTasks()

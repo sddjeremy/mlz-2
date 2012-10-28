@@ -5,14 +5,11 @@ import java.util.Set;
 
 public class ItemMCH extends Item
 {
-	protected Set<EntityZombie> zombiesHit;
-	
 	protected ItemMCH(int par1)
 	{
 		super(par1);
 		this.setTabToDisplayOn(CreativeTabs.tabCombat);
 		this.setMaxStackSize(64);
-		zombiesHit = new HashSet<EntityZombie>();
 	}
 	
     /**
@@ -25,15 +22,17 @@ public class ItemMCH extends Item
     
     public boolean itemInteractionForEntity(ItemStack par1ItemStack, EntityLiving par2EntityLiving)
     {
-        if ((par2EntityLiving instanceof EntityZombie) && !(par2EntityLiving instanceof EntityZombieMC) && !zombiesHit.contains(par2EntityLiving))
+        if ((par2EntityLiving instanceof EntityZombie) && !(par2EntityLiving instanceof EntityZombieMC))
         {
         	EntityZombie z = (EntityZombie)par2EntityLiving;
-        	z.tasks.field_75782_a.clear();
-        	z.tasks.addTask(0, new EntityAISwimming(z));
-        	z.tasks.addTask(6, new EntityAIWander(z, z.moveSpeed));
-            z.tasks.addTask(7, new EntityAIWatchClosest(z, EntityPlayer.class, 8.0F));
-            z.tasks.addTask(7, new EntityAILookIdle(z));
-            
+        	if(!z.worldObj.isRemote)
+        	{
+        		Entity mc = new EntityZombieMC(z.worldObj);
+                mc.setLocationAndAngles(z.posX, z.posY, z.posZ, z.rotationYaw, z.rotationPitch);
+                z.worldObj.spawnEntityInWorld(mc);
+                z.worldObj.updateEntity(mc);
+                z.setDead();
+        	}
             return true;
         }
         else
