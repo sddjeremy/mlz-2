@@ -1,3 +1,6 @@
 *.class
 crash-reports
 stats
+saves
+Client/status
+Client/saves
