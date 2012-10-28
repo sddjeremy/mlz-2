@@ -6,7 +6,7 @@ import java.util.List;
 
 public class EntityAITasks
 {
-    private List field_75782_a = new ArrayList();
+    public List field_75782_a = new ArrayList(); /* yuck */
     private List field_75780_b = new ArrayList();
     private final Profiler field_75781_c;
     private int field_75778_d = 0;
