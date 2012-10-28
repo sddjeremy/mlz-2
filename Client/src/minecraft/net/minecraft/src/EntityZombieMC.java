@@ -16,8 +16,15 @@ public class EntityZombieMC extends EntityZombie
         this.tasks.addTask(6, new EntityAIWander(this, this.moveSpeed));
         this.tasks.addTask(7, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
         this.tasks.addTask(7, new EntityAILookIdle(this));
+        this.texture = "/mczombie.png";
         
         //tough
         this.attackStrength = 10;
 	}
+	
+	public void onLivingUpdate()
+    {
+		super.onLivingUpdate();
+		super.extinguish();
+    }
 }

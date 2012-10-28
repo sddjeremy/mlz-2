@@ -21,7 +21,7 @@ public class mod_MLZ extends BaseMod
 	public void addRecipes()
 	{
 		ModLoader.addRecipe(new ItemStack(mch, 1), new Object[] { "R", "H", 'R', Block.torchRedstoneActive, 'H', Item.helmetSteel});
-		ModLoader.addRecipe(new ItemStack(mch, 64), new Object[] { "D", 'D', Block.dirt } );
+		ModLoader.addRecipe(new ItemStack(mch, 64), new Object[] { "D", 'D', Block.dirt } ); /* For testing */
 	}
 	
 	public String getVersion()

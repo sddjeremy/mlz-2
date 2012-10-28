@@ -32,6 +32,7 @@ public class ItemMCH extends Item
                 z.worldObj.spawnEntityInWorld(mc);
                 z.worldObj.updateEntity(mc);
                 z.setDead();
+                --par1ItemStack.stackSize;
         	}
             return true;
         }
