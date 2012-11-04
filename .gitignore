@@ -2,7 +2,6 @@
 crash-reports
 stats
 saves
+Client/bin
 Client/status
-Client/status/*
 Client/saves
-Client/saves/*

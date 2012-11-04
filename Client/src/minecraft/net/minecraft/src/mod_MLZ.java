@@ -15,7 +15,7 @@ public class mod_MLZ extends BaseMod
 	{
 		this.addRecipes();
 		ModLoader.addName(mch, "Mind-Control Helmet");
-		mch.iconIndex = ModLoader.addOverride("/gui/items.png", "/mchelmet.png");
+		mch.iconIndex = ModLoader.addOverride("/gui/items.png", "mchelmet.png");
 		
 		ModLoader.registerEntityID(EntityZombieMC.class, "EntityZombieMC", 123);
 	}
