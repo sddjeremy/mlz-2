@@ -3,4 +3,6 @@ crash-reports
 stats
 saves
 Client/status
+Client/status/*
 Client/saves
+Client/saves/*
