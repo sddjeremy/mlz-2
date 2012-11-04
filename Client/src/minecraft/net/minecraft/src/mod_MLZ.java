@@ -8,6 +8,8 @@ import net.minecraft.client.Minecraft;
 public class mod_MLZ extends BaseMod
 {
 	public static ItemMCH mch = (ItemMCH)(new ItemMCH(128).setItemName("mch"));
+	public static Item defenseBeacon = mch; /* Testing */
+	public static Item miningBeacon = mch; /* Testing */
 	
 	public void load()
 	{

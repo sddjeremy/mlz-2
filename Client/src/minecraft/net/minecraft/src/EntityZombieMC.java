@@ -13,6 +13,8 @@ public class EntityZombieMC extends EntityZombie
         //this.tasks.addTask(3, new EntityAIAttackOnCollide(this, EntityVillager.class, this.moveSpeed, true));
         //this.tasks.addTask(4, new EntityAIMoveTwardsRestriction(this, this.moveSpeed));
         //this.tasks.addTask(5, new EntityAIMoveThroughVillage(this, this.moveSpeed, false));
+		this.tasks.addTask(1, new EntityAITempt(this, 0.25F, mod_MLZ.defenseBeacon.shiftedIndex, false));
+		this.tasks.addTask(1, new EntityAITempt(this, 0.25F, mod_MLZ.miningBeacon.shiftedIndex, false));
         this.tasks.addTask(6, new EntityAIWander(this, this.moveSpeed));
         this.tasks.addTask(7, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
         this.tasks.addTask(7, new EntityAILookIdle(this));
