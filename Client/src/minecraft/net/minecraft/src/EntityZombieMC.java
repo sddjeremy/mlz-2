@@ -2,6 +2,8 @@ package net.minecraft.src;
 
 public class EntityZombieMC extends EntityZombie
 {
+	protected boolean attackMode = false;
+	
 	public EntityZombieMC(World par1World)
 	{
 		super(par1World);
@@ -15,9 +17,12 @@ public class EntityZombieMC extends EntityZombie
         //this.tasks.addTask(5, new EntityAIMoveThroughVillage(this, this.moveSpeed, false));
 		this.tasks.addTask(1, new EntityAITempt(this, 0.25F, mod_MLZ.defenseBeacon.shiftedIndex, false));
 		this.tasks.addTask(1, new EntityAITempt(this, 0.25F, mod_MLZ.miningBeacon.shiftedIndex, false));
-        this.tasks.addTask(6, new EntityAIWander(this, this.moveSpeed));
+		this.tasks.addTask(6, new EntityAIWander(this, this.moveSpeed));
         this.tasks.addTask(7, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
         this.tasks.addTask(7, new EntityAILookIdle(this));
+        this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityZombie.class, this.moveSpeed, false));
+        targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityMob.class, 16.0F, 0, true));
+        
         this.texture = "mczombie.png";
         
         //tough
@@ -29,4 +34,21 @@ public class EntityZombieMC extends EntityZombie
 		super.onLivingUpdate();
 		super.extinguish();
     }
+	
+	public void goAttackMode()
+	{
+		attackMode = true;
+	}
+	
+	public EntityLiving getAttackTarget()
+	{
+		if(attackMode)
+		{
+			return super.getAttackTarget();
+		}
+		else
+		{
+			return null;
+		}
+	}
 }
