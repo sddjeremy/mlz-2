@@ -36,9 +36,13 @@ public class ItemDefenseBeacon extends Item
         			((EntityZombieMC)e).goAttackMode();
         		}
         		*/
-        		for(EntityZombieMC z: mod_MLZ.zombies)
+        		AxisAlignedBB bb = par2EntityPlayer.boundingBox.expand(10, 10, 10);
+            	for(Object e: par3World.getEntitiesWithinAABB(EntityZombieMC.class, bb))
         		{
-        			z.goAttackMode();
+            		if(e instanceof EntityZombieMC)
+            		{
+            			((EntityZombieMC)e).goAttackMode();
+            		}
         		}
                 --par1ItemStack.stackSize;
             }

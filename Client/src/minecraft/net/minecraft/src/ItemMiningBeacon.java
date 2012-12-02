@@ -33,6 +33,15 @@ public class ItemMiningBeacon extends Item
                 --par1ItemStack.stackSize;
             }
 
+        	AxisAlignedBB bb = par2EntityPlayer.boundingBox.expand(10, 10, 10);
+        	for(Object e: par3World.getEntitiesWithinAABB(EntityZombieMC.class, bb))
+    		{
+        		if(e instanceof EntityZombieMC)
+        		{
+        			((EntityZombieMC)e).goMiningMode();
+        			System.out.println("FOUND A ZOMBIE");
+        		}
+    		}
             return true;
         }
     }

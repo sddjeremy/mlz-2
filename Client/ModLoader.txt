@@ -1,18 +1,18 @@
-Nov 19, 2012 4:56:26 PM net.minecraft.src.ModLoader init
+Dec 02, 2012 2:44:37 PM net.minecraft.src.ModLoader init
 FINE: ModLoader 1.3.2 Initializing...
-Nov 19, 2012 4:56:26 PM net.minecraft.src.ModLoader readFromClassPath
+Dec 02, 2012 2:44:37 PM net.minecraft.src.ModLoader readFromClassPath
 FINER: Adding mods from C:\Users\Terrorist Plots\git\mlz-2\Client\bin
-Nov 19, 2012 4:56:26 PM net.minecraft.src.ModLoader readFromClassPath
+Dec 02, 2012 2:44:37 PM net.minecraft.src.ModLoader readFromClassPath
 FINER: Directory found.
-Nov 19, 2012 4:56:26 PM net.minecraft.src.ModLoader addMod
+Dec 02, 2012 2:44:37 PM net.minecraft.src.ModLoader addMod
 FINE: Mod Initialized: "mod_MLZ 1.0" from mod_MLZ.class
-Nov 19, 2012 4:56:26 PM net.minecraft.src.ModLoader addOverride
+Dec 02, 2012 2:44:37 PM net.minecraft.src.ModLoader addOverride
 FINER: addOverride(/gui/items.png,mchelmet.png,38). 80 left.
-Nov 19, 2012 4:56:26 PM net.minecraft.src.ModLoader addOverride
+Dec 02, 2012 2:44:37 PM net.minecraft.src.ModLoader addOverride
 FINER: addOverride(/gui/items.png,defensebeacon.png,102). 79 left.
-Nov 19, 2012 4:56:26 PM net.minecraft.src.ModLoader addOverride
+Dec 02, 2012 2:44:37 PM net.minecraft.src.ModLoader addOverride
 FINER: addOverride(/gui/items.png,miningbeacon.png,118). 78 left.
-Nov 19, 2012 4:56:26 PM net.minecraft.src.ModLoader init
+Dec 02, 2012 2:44:37 PM net.minecraft.src.ModLoader init
 FINE: Mod Loaded: "mod_MLZ 1.0"
-Nov 19, 2012 4:56:26 PM net.minecraft.src.ModLoader addAllRenderers
+Dec 02, 2012 2:44:37 PM net.minecraft.src.ModLoader addAllRenderers
 FINE: Initialized
