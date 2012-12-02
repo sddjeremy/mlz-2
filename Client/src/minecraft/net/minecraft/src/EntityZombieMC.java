@@ -41,7 +41,7 @@ public class EntityZombieMC extends EntityZombie
 	            int y = MathHelper.floor_double(this.posY - 0.75 + this.rand.nextDouble() * 3.0D);
 	            int z = MathHelper.floor_double(this.posZ - 1 + this.rand.nextDouble() * 2.0D);
 	            int blockType = this.worldObj.getBlockId(x, y, z);
-	            if(blockType > 0 && blockType < Block.blocksList.length && blockType != mod_MLZ.miningBeaconBlock.blockID && blockType != mod_MLZ.defenseBeaconBlock.blockID)
+	            if(blockType > 0 && blockType < Block.blocksList.length && blockType != mod_MLZ.miningBeaconBlock.blockID && blockType != mod_MLZ.defenseBeaconBlock.blockID && blockType != Block.bedrock.blockID)
 	            {      
 		            Block.blocksList[blockType].dropBlockAsItem(this.worldObj, x, y, z, this.worldObj.getBlockMetadata(x, y, z), 0);
 		            this.worldObj.setBlockWithNotify(x, y, z, 0);
